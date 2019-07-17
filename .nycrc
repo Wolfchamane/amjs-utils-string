@@ -1,7 +1,7 @@
 {
     "extension": ["js"],
-    "exclude": ["tests/**/*.js", "node_modules"],
-    "include": ["src/**/*.js"],
+    "exclude": ["tests/**/*.mjs", "node_modules"],
+    "include": ["src/**/*.mjs"],
     "extends": "@istanbuljs/nyc-config-babel",
     "reporter": ["html"],
     "report-dir": "./coverage",

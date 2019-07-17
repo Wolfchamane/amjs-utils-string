@@ -1,4 +1,4 @@
-const stringify = require('./stringify');
+const stringify = require('./stringify.mjs');
 
 /**
  * Transforms a text into itself but with first character in upper case, i.e: 'hello' -> 'Hello'
