@@ -17,11 +17,14 @@ module.exports = (value = '', sep = '-') =>
         part.unshift(value[i]);
         if (/[A-Z]/.test(value[i]) && part.length)
         {
-            parts.push(part.join('.').replace(/\./g, ''));
+            parts.unshift(part.join('.').replace(/\./g, ''));
             part = [];
         }
     }
-    parts.unshift(part.join('.').replace(/\./g, ''));
+    if (part.length)
+    {
+        parts.unshift(part.join('.').replace(/\./g, ''));
+    }
 
     return parts.join(sep).toLowerCase();
 };
