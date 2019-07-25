@@ -6,5 +6,6 @@ module.exports = {
     capitalize  : require('./src/capitalize.mjs'),
     camelize    : require('./src/camelize.mjs'),
     dotProp     : require('./src/dot-prop.mjs'),
-    stringify   : require('./src/stringify.mjs')
+    stringify   : require('./src/stringify.mjs'),
+    decamelize  : require('./src/decamelize.mjs')
 };
