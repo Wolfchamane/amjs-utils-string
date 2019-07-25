@@ -1,4 +1,4 @@
-# @amjs/utils 0.1.2
+# @amjs/utils 0.1.3
 
 ![Statements](https://img.shields.io/badge/Statements-100%25-brightgreen.svg) ![Branches](https://img.shields.io/badge/Branches-100%25-brightgreen.svg) ![Functions](https://img.shields.io/badge/Functions-100%25-brightgreen.svg) ![Lines](https://img.shields.io/badge/Lines-100%25-brightgreen.svg)
 
@@ -25,20 +25,6 @@ const { camelize } = require('@amjs/utils');
 console.log(camelize('hello-world')); // 'helloWorld'
 ```
 
-#### stringify
-
-```javascript
-const { stringify } = require('@amjs/utils');
-console.log(stringify('text')); // 'text'
-console.log(stringify('')); // ''
-console.log(stringify(1)); // '1'
-console.log(stringify(true)); // 'true'
-console.log(stringify({ key : 'value' })); // '{"key":"value"}'
-console.log(stringify([{ key : 'value'}])); // '[{"key":"value"}]'
-console.log(stringify()); // Error
-console.log(stringify(null); // Error
-```
-
 #### dotProp
 
 ```javascript
@@ -50,7 +36,32 @@ const context = {
     }
 };
 
+// Interface: dotProp(ref = {}, prop = '', value = '')
+// Use two arguments in order to return a value
 console.log(dotProp(context, 'key.value')); // 'value'
+// Use additional 3rd argument to assign new value
 dotProp(context, 'key.value', 'foo');
 console.log(dotProp(context, 'key.value')); // 'foo'
 ```
+
+#### decamelize
+
+```javascript
+const { decamelize } = require('@amjs/utils');
+console.log(decamelize('helloWorld'));      // 'hello-world'
+// Use second parameter to assign an specific word character separator
+console.log(decamelize('helloWorld', '/')); // 'hello/world'
+```
+
+#### stringify
+
+```javascript
+const { stringify } = require('@amjs/utils');
+console.log(stringify('text'));                 // 'text'
+console.log(stringify(''));                     // ''
+console.log(stringify(1));                      // '1'
+console.log(stringify(true));                   // 'true'
+console.log(stringify({ key : 'value' }));      // '{"key":"value"}'
+console.log(stringify([{ key : 'value' }]));    // '[{"key":"value"}]'
+console.log(stringify());                       // Error
+console.log(stringify(null);                    // Error```
