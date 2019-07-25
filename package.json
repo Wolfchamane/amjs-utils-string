@@ -1,6 +1,6 @@
 {
     "name": "@amjs/utils",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "Set of tools as capitalize text, camelize text, dotProp, etc.",
     "keywords": [
         "nodejs",
