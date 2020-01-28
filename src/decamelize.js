@@ -1,4 +1,4 @@
-const stringify = require('./stringify.mjs');
+const stringify = require('./stringify');
 
 /**
  * Transforms a camelCase text into its non-camelCase value, i.e.: 'helloWorld' -> 'hello-world'
@@ -10,7 +10,7 @@ module.exports = (value = '', sep = '-') =>
 {
     value = stringify(value);
 
-    let parts = [];
+    const parts = [];
     let part = [];
     for (let i = value.length - 1, l = 0; i >= l; i--)
     {

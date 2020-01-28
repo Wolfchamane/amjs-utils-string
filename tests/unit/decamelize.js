@@ -1,7 +1,7 @@
 const { equal } = require('assert');
-const decamelize = require('../../src/decamelize.mjs');
+const decamelize = require('../../src/decamelize');
 
-(function()
+(function ()
 {
     equal(decamelize('helloWorld') === 'hello-world', true,
         '@amjs/utils > decamelize > transforms "helloWorld" into "hello-world"');
@@ -11,4 +11,4 @@ const decamelize = require('../../src/decamelize.mjs');
 
     equal(decamelize() === '', true,
         '@amjs/utils > decamelize > by default does not transform an empty text');
-}());
+})();

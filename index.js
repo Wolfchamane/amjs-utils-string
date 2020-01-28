@@ -3,9 +3,9 @@
  * @version 0.1.0
  */
 module.exports = {
-    capitalize  : require('./src/capitalize.mjs'),
-    camelize    : require('./src/camelize.mjs'),
-    dotProp     : require('./src/dot-prop.mjs'),
-    stringify   : require('./src/stringify.mjs'),
-    decamelize  : require('./src/decamelize.mjs')
+    capitalize  : require('./src/capitalize'),
+    camelize    : require('./src/camelize'),
+    dotProp     : require('./src/dot-prop'),
+    stringify   : require('./src/stringify'),
+    decamelize  : require('./src/decamelize')
 };

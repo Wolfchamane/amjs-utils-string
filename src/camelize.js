@@ -1,5 +1,5 @@
-const capitalize = require('./capitalize.mjs');
-const stringify = require('./stringify.mjs');
+const capitalize = require('./capitalize');
+const stringify = require('./stringify');
 
 /**
  * Transforms a text into its camel-case form, i.e.: 'hello-world' -> 'helloWorld'
